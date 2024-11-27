@@ -1,0 +1,64 @@
+.mat-header {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  padding: 0 16px;
+}
+
+.logo {
+  max-width: 150px; /* Adjust logo size */
+  height: auto;
+  padding-left: 3rem;
+}
+
+.spacer {
+  flex: 1; /* Push nav links to the right */
+}
+
+.nav-links button {
+  text-transform: uppercase;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.active {
+  background-color: var(--bg-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 960px) {
+  .nav-links {
+    display: none; /* Hide navigation links on small devices */
+  }
+
+  .menu-icon {
+    display: block;
+    margin-right: 2.5rem;
+    position: relative;
+  }
+
+  /* Increase the size of the mat-icon */
+  .menu-icon .mat-icon {
+    position: absolute;
+    transform: translate(-2rem, -1rem);
+    font-size: 32px;
+    width: 4rem;
+    height: 4rem;
+  }
+  ::ng-deep .mat-mdc-menu-content {
+    background-color: var(--bg-main);
+  }
+  .mat-mdc-menu-item:hover {
+    background-color: var(--bg-primary) !important;
+  }
+}
