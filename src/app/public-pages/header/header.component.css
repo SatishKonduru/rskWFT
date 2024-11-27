@@ -1,64 +1,80 @@
-.mat-header {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
-}
-
-mat-toolbar {
+/* Toolbar styles */
+.toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
   padding: 0 16px;
+  background-color: transparent;
 }
 
+/* Logo styles */
 .logo {
-  max-width: 150px; /* Adjust logo size */
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.logo img {
+  width: 10rem;
   height: auto;
-  padding-left: 3rem;
+}
+.active {
+  background-color: var(--bg-secondary);
+}
+/* Desktop Links (hidden on small screens) */
+.desktop-links {
+  display: flex;
+  gap: 1.2rem;
 }
 
-.spacer {
-  flex: 1; /* Push nav links to the right */
-}
-
-.nav-links button {
+.desktop-links a {
+  font-size: 1.2rem;
   text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color);
 }
 
+/* Menu Icon (hidden on larger screens) */
 .menu-icon {
   display: none;
 }
 
-.active {
-  background-color: var(--bg-primary);
+/* Mobile Menu (hidden by default) */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #303030;
+  padding: 16px;
+  position: absolute;
+  top: 64px; /* Below the toolbar */
+  right: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
-@media (max-width: 960px) {
-  .nav-links {
-    display: none; /* Hide navigation links on small devices */
+.mobile-menu a {
+  text-decoration: none;
+  padding: 8px 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.mat-mdc-button-base.mat-mdc-button-base.mat-unthemed:hover {
+  background-color: var(--bg-primary);
+  font-size: 1.2rem;
+}
+/* Mobile Menu Open State */
+.mobile-menu.open {
+  display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 959px) {
+  .desktop-links {
+    display: none;
   }
 
   .menu-icon {
     display: block;
-    margin-right: 2.5rem;
-    position: relative;
-  }
-
-  /* Increase the size of the mat-icon */
-  .menu-icon .mat-icon {
-    position: absolute;
-    transform: translate(-2rem, -1rem);
-    font-size: 32px;
-    width: 4rem;
-    height: 4rem;
-  }
-  ::ng-deep .mat-mdc-menu-content {
-    background-color: var(--bg-main);
-  }
-  .mat-mdc-menu-item:hover {
-    background-color: var(--bg-primary) !important;
   }
 }
