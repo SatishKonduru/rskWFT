@@ -1,10 +1,127 @@
 .container {
   margin-top: 1rem;
   color: var(--text-color);
+  padding: 0 1rem;
 }
-.layout-container {
-  width: min(100rem, 100%);
-  margin: 0 auto;
-  columns: 2 50%;
-  column-gap: 1em;
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+
+.hero-section h1 {
+  text-transform: uppercase;
+  color: var(--bg-primary);
+  font-size: var(--heading-para);
+}
+
+.hero-section h2 {
+  font-weight: bold;
+  color: var(--bg-secondary);
+  font-size: var(--heading-section);
+  font-family: "Permanent Marker";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero-section p {
+  display: block;
+  font-size: var(--normal-para);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.image-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-content::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.073);
+  border-radius: 3rem;
+  backdrop-filter: blur(10rem);
+  box-shadow: 0 1rem 10rem rgba(255, 255, 255, 0.963);
+  transform: rotate(-5deg);
+
+  z-index: -1; /* Place behind the image */
+}
+
+.hero-section img {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  z-index: 1; /* Ensure it stays above the decorative shape */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .image-content::before {
+    width: 100%;
+    height: 100%;
+    transform: rotate(0); /* Remove rotation for smaller screens */
+  }
+
+  .hero-section img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .image-content::before {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .image-content::before {
+    border-radius: 8px;
+  }
 }
