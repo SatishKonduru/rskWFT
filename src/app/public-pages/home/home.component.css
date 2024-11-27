@@ -1,0 +1,10 @@
+.container {
+  margin-top: 1rem;
+  color: var(--text-color);
+}
+.layout-container {
+  width: min(100rem, 100%);
+  margin: 0 auto;
+  columns: 2 50%;
+  column-gap: 1em;
+}
