@@ -3,23 +3,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 1.6rem;
   background-color: transparent;
 }
 
 /* Logo styles */
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-}
+
 .logo img {
   width: 10rem;
   height: auto;
 }
-.active {
-  background-color: var(--bg-secondary);
-}
+
 /* Desktop Links (hidden on small screens) */
 .desktop-links {
   display: flex;
@@ -32,7 +26,9 @@
   text-decoration: none;
   color: var(--text-color);
 }
-
+.active {
+  background-color: var(--bg-secondary);
+}
 /* Menu Icon (hidden on larger screens) */
 .menu-icon {
   display: none;
@@ -42,13 +38,14 @@
 .mobile-menu {
   display: none;
   flex-direction: column;
-  background-color: #303030;
-  padding: 16px;
+  background-color: var(--bg-main);
+  padding: 1.6rem;
   position: absolute;
-  top: 64px; /* Below the toolbar */
+  top: 6.4rem; /* Below the toolbar */
   right: 0;
-  width: 100%;
+  width: 30%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .mobile-menu a {
@@ -59,7 +56,7 @@
   text-decoration: none;
   color: var(--text-color);
 }
-.mat-mdc-button-base.mat-mdc-button-base.mat-unthemed:hover {
+.mat-mdc-button-base:hover {
   background-color: var(--bg-primary);
   font-size: 1.2rem;
 }

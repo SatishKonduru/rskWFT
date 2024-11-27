@@ -1,34 +1,41 @@
-<mat-toolbar class="toolbar">
-  <!-- Logo -->
-  <div class="logo">
-    <img src="img/wft.png" />
-  </div>
+<div class="container">
+  <mat-toolbar class="toolbar">
+    <!-- Logo -->
+    <div class="logo"><img src="img/wft.png" /></div>
 
-  <!-- Desktop Links -->
-  <nav class="desktop-links">
-    <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
-    <a mat-button routerLink="/aboutus" routerLinkActive="active">About Us</a>
-    <a mat-button routerLink="/services" routerLinkActive="active">Services</a>
-    <a mat-button routerLink="/bmi" routerLinkActive="active">BMI Calculator</a>
-    <a mat-button routerLink="/ourteam" routerLinkActive="active">Our Team</a>
-    <a mat-button routerLink="/pricing" routerLinkActive="active">Pricing</a>
-    <a mat-button routerLink="/contactus" routerLinkActive="active"
-      >Contact Us</a
-    >
-    <a mat-button routerLink="/login" routerLinkActive="active">Login</a>
-  </nav>
+    <!-- Desktop Links -->
+    <nav class="desktop-links">
+      <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+      <a mat-button routerLink="/aboutus" routerLinkActive="active">About Us</a>
+      <a mat-button routerLink="/services" routerLinkActive="active"
+        >Services</a
+      >
+      <a mat-button routerLink="/bmi" routerLinkActive="active"
+        >BMI Calculator</a
+      >
+      <a mat-button routerLink="/ourteam" routerLinkActive="active">Our Team</a>
+      <a mat-button routerLink="/pricing" routerLinkActive="active">Pricing</a>
+      <a mat-button routerLink="/contactus" routerLinkActive="active"
+        >Contact Us</a
+      >
+      <a mat-button routerLink="/login" routerLinkActive="active">Login</a>
+    </nav>
 
-  <!-- Mobile Menu Icon -->
-  <button mat-icon-button class="menu-icon" (click)="toggleMenu()">
-    <mat-icon>menu</mat-icon>
-  </button>
-</mat-toolbar>
+    <!-- Mobile Menu Icon -->
+    <button mat-icon-button class="menu-icon" (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" [class.open]="menuOpen">
   <a mat-button routerLink="/home" (click)="closeMenu()">Home</a>
-  <a mat-button routerLink="/about" (click)="closeMenu()">About</a>
+  <a mat-button routerLink="/aboutus" (click)="closeMenu()">About Us</a>
   <a mat-button routerLink="/services" (click)="closeMenu()">Services</a>
-  <a mat-button routerLink="/contact" (click)="closeMenu()">Contact</a>
-  <a mat-button routerLink="/profile" (click)="closeMenu()">Profile</a>
+  <a mat-button routerLink="/bmi" (click)="closeMenu()">BMI Calculator</a>
+  <a mat-button routerLink="/ourteam" (click)="closeMenu()">Our Team</a>
+  <a mat-button routerLink="/pricing" (click)="closeMenu()">Pricing</a>
+  <a mat-button routerLink="/contactus" (click)="closeMenu()">Contact Us</a>
+  <a mat-button routerLink="/login" (click)="closeMenu()">Login</a>
 </div>
