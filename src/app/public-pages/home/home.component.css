@@ -14,13 +14,13 @@
 
 .hero-section h1 {
   text-transform: uppercase;
-  color: var(--bg-primary);
+  color: #ddd;
   font-size: var(--heading-para);
 }
 
 .hero-section h2 {
   font-weight: bold;
-  color: var(--bg-secondary);
+  color: var(--bg-primary);
   font-size: var(--heading-section);
   font-family: "Permanent Marker";
   font-optical-sizing: auto;
