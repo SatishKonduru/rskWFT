@@ -57,7 +57,7 @@
   z-index: -1; /* Place behind the image */
 }
 
-.hero-section img {
+.image-content img {
   position: relative;
   max-width: 100%;
   height: auto;
@@ -77,7 +77,7 @@
     transform: rotate(0); /* Remove rotation for smaller screens */
   }
 
-  .hero-section img {
+  .image-content img {
     margin: 0 auto;
   }
 }
