@@ -21,8 +21,8 @@
 .img-section img {
   max-width: 100rem; /* Ensure it doesn't overflow the container */
   max-height: auto;
-  object-fit: contain; /* Maintain aspect ratio and contain it inside the container */
-  transform: translateX(0); /* Remove any manual translation */
+  object-fit: cover; /* Maintain aspect ratio and contain it inside the container */
+  transform: translateX(-10rem);
 }
 .text-section {
   font-size: var(--heading-section);
@@ -32,4 +32,5 @@
 }
 .text-section::first-letter {
   color: var(--bg-primary);
+  font-weight: bold;
 }
