@@ -1,0 +1,35 @@
+/* Container Styles */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  place-items: center;
+  width: 100%; /* Ensure it takes full width */
+  height: 100%; /* Ensure it takes full height */
+}
+
+/* Image Section Styles */
+.img-section {
+  display: flex;
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
+  width: 100%; /* Take full width */
+  height: 100%; /* Take full height */
+}
+
+/* Make sure the image is responsive and centered */
+.img-section img {
+  max-width: 100rem; /* Ensure it doesn't overflow the container */
+  max-height: auto;
+  object-fit: contain; /* Maintain aspect ratio and contain it inside the container */
+  transform: translateX(0); /* Remove any manual translation */
+}
+.text-section {
+  font-size: var(--heading-section);
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+.text-section::first-letter {
+  color: var(--bg-primary);
+}
