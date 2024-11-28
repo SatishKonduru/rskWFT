@@ -9,7 +9,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: center;
-  position: relative;
+  /* position: relative; */
 }
 
 .hero-section h1 {
@@ -22,10 +22,10 @@
   font-weight: bold;
   color: var(--bg-primary);
   font-size: var(--heading-section);
-  font-family: "Permanent Marker";
+  font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 5px;
 }
 
 .hero-section p {

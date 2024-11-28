@@ -1,5 +1,6 @@
 /* Toolbar styles */
 .toolbar {
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,25 +16,70 @@
 }
 
 /* Desktop Links (hidden on small screens) */
-.desktop-links {
-  display: flex;
-  gap: 1.2rem;
-}
-
-.desktop-links a {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--text-color);
-}
 .active {
-  background-color: var(--bg-primary);
+  color: var(--bg-primary) !important;
 }
 /* Menu Icon (hidden on larger screens) */
 .menu-icon {
   display: none;
 }
+.nav-menu,
+.mobile-menu {
+  text-align: center;
+}
+.nav-menu ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 32px;
+  position: relative;
+  z-index: 1;
+}
+.mobile-menu ul li a {
+  position: relative;
+}
 
+.nav-menu ul li:hover > a,
+.mobile-menu ul li:hover > a {
+  color: var(--bg-primary);
+}
+
+.nav-menu ul li:hover > a:after {
+  opacity: 1;
+}
+
+.nav-menu ul li a,
+.mobile-menu ul li a {
+  color: #ffffff;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  padding: 10px 0px;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.nav-menu ul li a:after,
+.mobile-menu ul li a:after {
+  position: absolute;
+  left: 0;
+  top: 22px;
+  height: 1px;
+  width: 100%;
+  background: var(--bg-primary);
+  content: "";
+  -webkit-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
 /* Mobile Menu (hidden by default) */
 .mobile-menu {
   display: none;
@@ -56,10 +102,7 @@
   text-decoration: none;
   color: var(--text-color);
 }
-.mat-mdc-button-base:hover {
-  background-color: var(--bg-primary);
-  font-size: 1.2rem;
-}
+
 /* Mobile Menu Open State */
 .mobile-menu.open {
   display: flex;
@@ -67,7 +110,7 @@
 
 /* Responsive Styles */
 @media (max-width: 959px) {
-  .desktop-links {
+  .nav-menu {
     display: none;
   }
 
