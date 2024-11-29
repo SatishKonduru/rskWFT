@@ -7,7 +7,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  transition: all .5s ease;
+  transition: all .3s ease;
   will-change: transorm;
 }
 
