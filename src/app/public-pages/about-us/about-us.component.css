@@ -33,6 +33,7 @@
   display: block;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
 }
 .why-section h6{
   display: flex;
@@ -58,22 +59,41 @@
 }
 
 .modern-equipment{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
   text-align: center;
+  margin-bottom: 5rem;
 }
-.icon {
-  margin-top: 2rem;
-  font-size: 2.5rem; /* Adjust size of the icon */
-  background-color: #444; /* Red circle background */
-  color: white; /* Icon color */
-  border-radius: 50%; /* Make the background circular */
-  padding: 3.5rem; /* Adjust the size of the circle */
-  display: inline-block;
-  margin-bottom: 2rem; /* Space between icon and text */
-  transition: all .3s;
+
+.modern-equipment p .icon{
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;transition: all .3s;
+  position: relative;
+  transition: all 0.5s ease;
 }
-.icon:hover{
+.icon::after{
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #000;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  transform: translate(-40%, -35%);
+  border: 2px solid orangered;
+  z-index: -1;
+
+}
+.icon:hover::after{
+
   background-color: var(--bg-primary);
+  border: 5px solid #fff;
 }
 .modern-equipment h2{
   margin-top: 1rem;
