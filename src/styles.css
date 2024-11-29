@@ -16,10 +16,11 @@ html {
 }
 body {
   background-color: var(--bg-main) !important;
+
 }
 
 :root {
-  --bg-main: #292929;
+  --bg-main: #000;
   --bg-primary: #ff4500;
   --bg-secondary: brown;
   --bg-tertiary: olive;
