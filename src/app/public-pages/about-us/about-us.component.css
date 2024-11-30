@@ -190,7 +190,7 @@
   transition-delay: 0s;
 }
 
-.content .contentBx h3{
+.content .contentBox h3{
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 2px;
@@ -205,12 +205,12 @@
   transform: translateY(-20px);
 }
 
-.card:hover .content .contentBx h3{
+.card:hover .content .contentBox h3{
   opacity: 1;
   transform: translateY(0);
 }
 
-.content .contentBx h3 span{
+.content .contentBox h3 span{
   font-size: 12px;
   font-weight: 300;
   text-transform: initial;
