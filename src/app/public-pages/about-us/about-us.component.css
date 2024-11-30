@@ -216,13 +216,13 @@
   text-transform: initial;
 }
 
-.content .sci{
+.content .social-icons{
   position: relative;
   bottom: 10px;
   display: flex;
 }
 
-.content .sci li{
+.content .social-icons li{
   list-style: none;
   margin: 0 10px;
   transform: translateY(40px);
@@ -231,12 +231,12 @@
   transition-delay: calc(0.2s * var(--i));
 }
 
-.card:hover .content .sci li{
+.card:hover .content .social-icons li{
   transform: translateY(0);
   opacity: 1;
 }
 
-.content .sci li a{
+.content .social-icons li a{
   color: #fff;
   font-size: 24px;
 }
