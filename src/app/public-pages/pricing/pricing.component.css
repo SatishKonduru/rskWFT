@@ -1,13 +1,5 @@
 
-.pricing-plans {
-  gap: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  padding: 64px;
-}
+
 .container h1 {
   text-align: center;
   padding-top: 10%;
@@ -29,9 +21,18 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.pricing-plans {
+  gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 64px;
+}
 
 .pricing-card {
-  --col: #e4e4e7;
+  --col: #e4e4e4;
   position: relative;
   min-width: 360px;
   padding: 32px;
@@ -44,7 +45,7 @@
 }
 
 .pricing-card.basic {
-  --col: #0891b2;
+  --col: #6a744b;
 }
 
 .pricing-card.standard {
