@@ -142,7 +142,7 @@
   word-wrap: break-word;
 }
 
-.our-team .card_Container{
+.our-team .card_container{
   position: relative;
   display: flex;
   justify-content: center;
@@ -151,7 +151,7 @@
   margin: 40px 0;
 }
 
-.card_Container .card{
+.card_container .card{
   position: relative;
   width: 300px;
   height: 400px;
