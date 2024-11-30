@@ -163,7 +163,7 @@
   align-items: center;
 }
 
-.card .imgBx, .imgBx img{
+.card .imgBox, .imgBox img{
   width: 100%;
   height: 100%;
 }
