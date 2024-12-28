@@ -26,6 +26,7 @@
   font-optical-sizing: auto;
   font-weight: 700;
   letter-spacing: 5px;
+  text-shadow: 2px 4px 4px #fff;
 }
 
 .hero-section p {
